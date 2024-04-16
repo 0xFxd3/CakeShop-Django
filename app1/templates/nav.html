@@ -1,0 +1,59 @@
+{% load static %}
+
+<style>
+	.custombat-icon {
+	  height:8vh;
+    width:4vw;
+	}
+
+
+.navbar-toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+background-color:green;
+}
+  </style>
+
+<!-- Start of Navigation bar -->
+
+<div class="container-fluid m-0 p-0 bg-transparent">
+
+  <div class="row m-3 p-0">
+
+      <div class="col-12 m-0 p-0">
+                              <nav class="navbar navbar-expand-lg bg-light border border-dark border-5 ">
+                                  <div class="container">
+
+                                  <a class="navbar-brand" href="https://www.sccb.ac.uk/" target="_blank">
+                                      
+              <img src="{% static '/images/cake.png' %}" alt="Cool Cake" class="d-inline-block align-text-top setBat ms-1 custombat-icon">
+                                     
+             <div class="fs-4 text-success text-center fw-bolder ms-2"> Brians Cakes </div>
+                                      
+                                  </a>
+                              
+                                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                      <span class="navbar-toggler-icon"></span>
+                                  </button>
+                              
+                                  <div class="collapse navbar-collapse" id="navbarNav">
+                                      <ul class="navbar-nav ms-5 me-5 ps-3 mt-1">
+
+                                      
+                                          <li class="nav-item">
+                                            <a href="{% url 'cakesInfo' %}">Buy</a>
+                                          </li>
+
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="/admin">Staff</a>
+                                          </li>
+                  
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="/tenniscourts">Help</a>
+                                          </li>
+
+                                      </ul>
+                                  </div>
+                                  </div>
+                              </nav>
+      </div>

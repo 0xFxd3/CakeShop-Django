@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% load bootstrap_icons %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="{% static 'css/font.css' %}">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    
+      <div class="container-fluid position-relative">
+       
+        <div class="row pt-1">
+              <div class="col-12">
+                {% include 'nav.html' %}  
+                {% block content %}
+                {% endblock %}
+              </div>
+        </div>
+    
+      </div>
+
+<div class="container-fluid">
+
+    <div class="row mt-5">
+        <div class="col-2">
+        </div>
+        
+        <div class="col-8 border border-dark border-5 p-2">
+            <p>Marvelous Cakes</p>
+            <div class="grid-container" style="display: inline-block;">
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="BreadPudding" class="btn btn-primary" value="BreadPudding" />
+                </form>
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="cupcake" class="btn btn-primary" value="cupcake" />
+                </form>
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="pancake" class="btn btn-primary" value="pancake" />
+                </form>
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="waffles" class="btn btn-primary" value="waffles" />
+                </form>
+            </div>
+        </div>
+        
+        
+        
+
+        <div class="col-2">
+        </div>
+    </div>
+
+<div class="container-fluid position-relative">
+    <div class="row mt-5">
+        
+      <div class="col-12">
+        {% include 'endpage.html' %}  
+      </div>
+    
+
+    </div>
+
+
+</body>
+</html>

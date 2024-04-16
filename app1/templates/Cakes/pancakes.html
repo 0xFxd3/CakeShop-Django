@@ -1,0 +1,118 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% load bootstrap_icons %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="{% static 'css/font.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container-fluid">
+    
+        <div class="container-fluid position-relative">
+         
+          <div class="row pt-1">
+                <div class="col-12">
+                  {% include 'nav.html' %}  
+                  {% block content %}
+                  {% endblock %}
+                </div>
+          </div>
+      
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row mt-5">
+        <div class="col-2">
+        </div>
+        
+        <div class="col-8 border border-dark border-5 p-2">
+            <p>Marvelous Cakes</p>
+            <div class="grid-container" style="display: inline-block;">
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="BreadPudding" class="btn btn-primary" value="BreadPudding" />
+                </form>
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="cupcake" class="btn btn-primary" value="cupcake" />
+                </form>
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="pancake" class="btn btn-primary" value="pancake" />
+                </form>
+        
+                <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                    {% csrf_token %}
+                    <input type="submit" name="waffles" class="btn btn-primary" value="waffles" />
+                </form>
+            </div>
+
+<div class="container-fluid position-relative">
+
+  <div class="row pt-5">
+
+      <div class="col-1 bg-dark">
+
+      </div>
+
+    
+    <div class="col-5">
+        <div class="card">
+            <img src="{% static 'images/pancakes.jpg' %}" alt="Pancakes" class="card-img-top d-inline-block  ms-1">
+            <div class="card-body">
+              <p class="card-text fs-6">Grandmas Pancakes.</p>
+            </div>
+          </div>
+     
+    </div> 
+
+       
+    <div class="col-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header fw-bolder bg-dark text-light">
+          Ingredients
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ggggggggg</li>
+          <li class="list-group-item">sdf </li>
+          <li class="list-group-item">12414 </li>
+          <li class="list-group-item">fafafa</li>
+          <li class="list-group-item">PLUH</li>
+
+        </ul>
+      </div>
+     
+    </div> 
+    <div class="col-1 bg-dark">
+
+    </div>
+    </div>
+
+    <div class="container-fluid position-relative">
+        <div class="row mt-5">
+            
+          <div class="col-12">
+            {% include 'endpage.html' %}  
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
+
+
+
+

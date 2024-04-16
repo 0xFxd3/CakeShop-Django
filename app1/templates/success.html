@@ -1,0 +1,26 @@
+{% if success == True %}
+<p> the form has been submitted </p>
+{% endif %}
+
+<table border = "2">
+    <tr>
+        <td>Name </td>
+        <td>Address </td>
+        <td>Email </td>
+        <td>Date </td>
+        <td>Membership </td>
+    </tr>
+
+    {% for booking in bookingstuff %}
+        <tr>
+            <td>{{ booking.name }}
+                <a href="{% url 'deleteBooking' booking.name %}">DELETE</a>
+                <a href="{% url 'editBooking' booking.name %}">EDIT</a>
+            </td>
+            <td>{{ booking.address }}</td>
+            <td>{{ booking.email }}</td>
+            <td>{{ booking.date }}</td>
+            <td>{{ booking.membership }}</td>
+        </tr>
+    {% endfor %}
+</table>

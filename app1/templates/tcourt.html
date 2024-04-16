@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% load bootstrap_icons %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="{% static 'font.css' %}">
+
+</head>
+
+<body>
+<style>
+  .carousel-item img
+	{
+		object-fit: cover;
+		object-position: center;
+		height: 60vh;
+		overflow:hidden;
+	}
+</style>
+<div class="container-fluid">
+    
+      <div class="container-fluid fixed-top">
+       
+        <div class="row pt-1">
+              <div class="col-12">
+                {% include 'nav.html' %}  
+                {% block content %}
+                {% endblock %}
+              </div>
+        </div>
+    
+      </div>
+
+      <div class="container-fluid">
+
+        <!-- end of top of page -->
+        
+                <div class="row">
+        <!-- this is the left side  -->
+                <div class="col-2 bg-dark">
+        
+                </div>
+        
+        <!-- end of left side -->
+                   
+        <!-- Middle -->
+                    <div class="col-8 bg-success">
+        
+                        <!-- this is where we start the carousel -->
+        
+                        <div id="carouselExampleCaptions" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+        
+        
+          <div class="carousel-inner">
+                          
+                            <!-- this is a thing - image on the slide -->
+        <div class="carousel-item active"  data-bs-interval="0">
+        
+            <img src="{% static 'images/tennis1.png' %}" class="d-block w-100" alt="Birmingham Bull">
+        
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-3 fs-bolder bg-transparent opacity-50">Tennis court</h5>
+                                        
+                    <p class="text-light bg-black fs-bolder"> blah blah . </p>
+                </div>
+        </div>
+        
+        <!--  -->
+        
+                
+        <div class="carousel-item " data-bs-interval="0">
+          <img src="{% static 'images/tenIs.png' %}"  class="d-block w-100" alt="BHazy ">
+        
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-3 fs-bolder bg-transparent opacity-50">Inside courts</h5>
+                                        
+                    <p class="text-light bg-black fs-bolder"> These are our inside courts </p>
+                </div>
+        </div>
+
+        <div class="carousel-item " data-bs-interval="1">
+          <img src="{% static 'images/tennis.jpg' %}"  class="d-block w-100" alt="BHazy ">
+        
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-3 fs-bolder bg-transparent opacity-50">tennis1</h5>
+                                        
+                    <p class="text-light bg-black fs-bolder"> tennis1 tttt </p>
+                </div>
+        </div>
+                       
+        <div class="carousel-item " data-bs-interval="2">
+          <img src="{% static 'images/tennis3.webp' %}"  class="d-block w-100" alt="BHazy ">
+        
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-3 fs-bolder bg-transparent opacity-50">tennis2</h5>
+                                        
+                    <p class="text-light bg-black fs-bolder"> These are not </p>
+                </div>
+        </div>
+
+        
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+        
+        
+                    <!-- this is the right side of the image -->
+            <div class="col-2 bg-dark">
+        
+             </div>
+        
+                </div>
+        
+        <!-- This is the bottom of the pages.  -->
+                <div class="row mb-5 pt-2">
+                    <div class="col-12 bg-light text-center">
+                        <div class="text-danger display-1 p-2 fw-bolder"> Proud of Birmingham</div>
+                        </div>
+                
+                </div>     
+        
+
+<div class="container-fluid fixed-bottom">
+    <div class="row mt-5">
+        
+      <div class="col-12">
+        {% include 'endpage.html' %}  
+      </div>
+    
+
+    </div>
+
+
+</body>
+</html>
